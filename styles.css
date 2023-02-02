@@ -1,0 +1,20 @@
+body {
+    width: 34.375rem;
+    height: 60.81rem;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-family: 400;
+}
+
+/* Header */
+header {
+    display: flex;
+}
