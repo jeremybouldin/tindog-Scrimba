@@ -25,27 +25,12 @@ h2 {
 /* Header */
 header {
     display: flex;
-    gap: 11.25rem;
+    justify-content: space-between;
     padding: 1.5rem 1.125rem;
 }
 
 .header-icon {
-    width: 2.125rem;
     height: 2.125rem;
-}
-
-.paw-icon {
-    width: 1.375rem;
-    height: 1.25rem;
-    margin: auto auto;
-}
-
-.paw-oval {
-    display: flex;
-    width: 5.25rem;
-    height: 2.625rem;
-    background: linear-gradient(270deg, #fa695a 0%, #f83375 100%);
-    border-radius: 1.875rem;
 }
 
 /* Dog Image */
@@ -58,10 +43,11 @@ main {
     flex-direction: column;
     justify-content: end;
     margin: 0 auto;
-    background-image: url('images/profile-image.jpg');
+    background-image: url('images/dog-teddy.jpg');
     background-size: cover;
     width: 33.375rem;
     height: 47rem;
+    border-radius: 13px;
 }
 
 .profile-name,
@@ -97,9 +83,10 @@ main {
 
 .vote-icon {
     margin: auto auto;
+    height: 2.2rem;
 }
 
-.nope-icon {
+/* .nope-icon {
     width: 1.7rem;
     height: 1.7rem;
 }
@@ -107,7 +94,7 @@ main {
 .like-icon {
     width: 2.3rem;
     height: 2.03rem;
-}
+} */
 
 .nope-circle:hover {
     background-color: #ffe7ef;
