@@ -27,3 +27,7 @@ const dogs = [
 
 export default dogs
 // Remember to export the data!
+
+//Questions
+//Best way to position badge
+//Eventlistener on button vs. icon inside the button
