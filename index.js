@@ -5,14 +5,13 @@ import Dog from './Dog.js'
 const badgeEl = document.getElementById('badge')
 
 document.addEventListener('click', function (e) {
-    if (e.target.id === 'nope-button') {
+    if (e.target.id === 'nope-button' || e.target.id === 'nope-icon') {
         setBadgeHtml('no')
         currentDog.setSwipeStatus()
-    } else if (e.target.id === 'like-button') {
+    } else if (e.target.id === 'like-button' || e.target.id === 'like-icon') {
         setBadgeHtml('yes')
         currentDog.setLikeStatus()
     }
-    console.log(e)
 })
 
 function setBadgeHtml(swipe) {
@@ -23,12 +22,13 @@ function setBadgeHtml(swipe) {
         <img class="badge" src=${badgeSelection} alt="badge"/>
         `
     toggleBadge()
-
-    setTimeout(() => {
-        currentDog = getNextDog()
-        toggleBadge()
-        render()
-    }, 2000)
+    if (dogs.length > 0) {
+        setTimeout(() => {
+            currentDog = getNextDog()
+            toggleBadge()
+            render()
+        }, 1500)
+    }
 }
 
 function toggleBadge() {
@@ -38,8 +38,6 @@ function toggleBadge() {
 function getNextDog() {
     const nextDog = dogs.pop()
     return nextDog ? new Dog(nextDog) : {}
-    // setTimeout(() => {
-    // }, 2000)
 }
 
 function render() {
